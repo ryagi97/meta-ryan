@@ -1,2 +1,2 @@
-# meta-ryanlayer
-Test and fun layer for yocto
+# meta-ryan
+Test (and messing around) layer for yocto
