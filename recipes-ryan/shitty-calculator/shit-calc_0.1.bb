@@ -10,11 +10,14 @@ SRC_URI += "file://calc-func.h"
 S = "${WORKDIR}"
 
 do_compile () {
+	bbwarn "Compilation started..."
 	${CC} shit-calc.c calc-func.c ${LDFLAGS} -o shit-calc
+	bbnote "Compilation complete"
 }
 
 do_install () {
+	bbwarn "Installation started..."
 	install -d ${D}${bindir}
 	install -m 0755 shit-calc ${D}${bindir}
-
+	bbnote "Installation complete"
 }
