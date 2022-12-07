@@ -6,13 +6,14 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 SRC_URI = "file://shit-calc.c \ 
            file://calc-func.c \
            file://calc-func.h \ 
+           file://Makefile \
            "
 
 S = "${WORKDIR}"
 
 do_compile () {
 	bbwarn "Compilation started..."
-	${CC} shit-calc.c calc-func.c ${LDFLAGS} -o shit-calc
+	make
 	bbnote "Compilation complete"
 }
 
