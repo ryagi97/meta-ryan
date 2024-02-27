@@ -1,0 +1,29 @@
+{
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}/sources/poky/meta/lib",
+        "/home/ryagi/Projects/yocto/bbb-kirkstone/layers/poky/bitbake/lib",
+        "/home/ryagi/Projects/yocto/bbb-kirkstone/layers/poky/meta/lib"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/sources/poky/bitbake/lib",
+        "${workspaceFolder}/sources/poky/meta/lib",
+        "/home/ryagi/Projects/yocto/bbb-kirkstone/layers/poky/bitbake/lib",
+        "/home/ryagi/Projects/yocto/bbb-kirkstone/layers/poky/meta/lib"
+    ],
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "gitlens.codeLens.symbolScopes": [
+            "!Module"
+        ],
+        "editor.formatOnType": true,
+        "editor.wordBasedSuggestions": "off",
+        "files.trimTrailingWhitespace": false
+    },
+    "[shellscript]": {
+        "files.eol": "\n",
+        "files.trimTrailingWhitespace": false
+    },
+    "bitbake.pathToBitbakeFolder": "/home/ryagi/Projects/yocto/bbb-kirkstone/layers/poky/bitbake",
+    "task.saveBeforeRun": "always"
+}
