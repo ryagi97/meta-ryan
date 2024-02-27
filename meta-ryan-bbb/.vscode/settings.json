@@ -25,5 +25,5 @@
         "files.trimTrailingWhitespace": false
     },
     "bitbake.pathToBitbakeFolder": "/home/ryagi/Projects/yocto/bbb-kirkstone/layers/poky/bitbake",
-    "task.saveBeforeRun": "always"
+    "task.saveBeforeRun": "never"
 }

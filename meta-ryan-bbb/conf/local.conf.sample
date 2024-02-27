@@ -1,4 +1,3 @@
-
 #
 # Machine Selection
 #
@@ -35,9 +34,19 @@ PACKAGE_CLASSES ?= "package_deb"
 #SDKMACHINE ?= "i686"
 
 #
+# Additional Image Packages
+#
+IMAGE_INSTALL:append = " hedgehog-webserver"
+
+#
 # Extra image configuration defaults
 #
-EXTRA_IMAGE_FEATURES ?= "debug-tweaks"
+FEATURE_PACKAGES_debug-utils = "packagegroup-debug-utils"
+EXTRA_IMAGE_FEATURES ?= "\ 
+    debug-tweaks \
+    debug-utils \
+    ssh-server-openssh \
+"
 
 #
 # Additional image features
