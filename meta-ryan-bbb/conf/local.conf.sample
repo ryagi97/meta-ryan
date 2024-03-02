@@ -46,6 +46,7 @@ EXTRA_IMAGE_FEATURES ?= "\
     debug-tweaks \
     debug-utils \
     ssh-server-openssh \
+    package-management \
 "
 
 #
@@ -118,3 +119,8 @@ BB_DISKMON_DIRS ??= "\
 # track the version of this file when it was generated. This can safely be ignored if
 # this doesn't mean anything to you.
 CONF_VERSION = "2"
+
+#
+# Simple PR Service
+#
+PRSERV_HOST = "localhost:0"
