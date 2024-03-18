@@ -3,15 +3,21 @@ require recipes-core/images/core-image-minimal.bb
 #
 # USERS
 #
+# We leave the password empty which is unsafe, so we force the new users
+# to create a new one on first login using the passwd-expire feature
+#
 inherit extrausers
 
-PASSWORD = "\$5\$q13sD.Md0ZvJDIny\$s8cyCVPlRb1reIaFAzX2BW4tGdYYl1NaUe9tjrDegE2"
-USERNAME = "ryagi"
-GROUPS = "tty,dialout,sudo"
-SHELL = "/bin/bash"
+USER1 = "ryagi"
+GROUPS_USER1 = "tty,dialout,sudo"
+SHELL_USER1 = "/bin/bash"
 
 EXTRA_USERS_PARAMS = "\
-    useradd -p ${PASSWORD} -s ${SHELL} -m ${USERNAME}; \
-    usermod -aG ${GROUPS} ${USERNAME}; \
-    passwd-expire ${USERNAME}; \
+    useradd -s ${SHELL_USER1} -m ${USER1}; \
+    usermod -aG ${GROUPS_USER1} ${USER1}; \
+    passwd-expire ${USER1}; \
+"
+
+RDEPENDS:{PN} += "\ 
+    bash \
 "
